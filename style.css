@@ -1,0 +1,143 @@
+ /* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fb;
+    margin: 20px;
+    color: #333;
+}
+
+/* Main Heading Card */
+#main-heading {
+    font-family: 'Poppins', sans-serif;
+    color: #1e3a8a;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #dbeafe;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#main-heading img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.subheading {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Card Styling */
+.add-expense,
+.expenses-section,
+.how-to-use,
+.budget-video {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Section Headings */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+.add-expense form {
+    max-width: 500px;
+}
+
+.add-expense label {
+    display: block;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
+}
+
+/* Button */
+button {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #172554;
+}
+
+/* Expense Table */
+.expenses-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.expenses-section th,
+.expenses-section td {
+    border: 1px solid #d1d5db;
+    padding: 14px;
+    text-align: left;
+}
+
+.expenses-section th {
+    background-color: #1e3a8a;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.expenses-section tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.expenses-section tbody tr:hover {
+    background-color: #dbeafe;
+}
+
+/* How-to-use */
+summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1e3a8a;
+}
+
+/* Responsive Video */
+.budget-video iframe {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+}
