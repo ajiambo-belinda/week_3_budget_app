@@ -171,12 +171,46 @@ tbody tr:hover { background: #f0fdf4; }
 .goal-add button { white-space: nowrap; }
 
 /* ===== Responsive ===== */
+img { max-width: 100%; }
+
+/* Laptops and small tablets: narrower sidebar */
+@media (max-width: 1024px) {
+    .sidebar { width: 200px; }
+    main { margin-left: 200px; padding: 22px; }
+    .brand { font-size: 1.25rem; }
+}
+
+/* Tablets (portrait) and phones: sidebar becomes a top bar */
 @media (max-width: 800px) {
     .sidebar { position: static; width: 100%; padding: 14px; gap: 12px; }
-    nav { flex-direction: row; overflow-x: auto; }
-    .nav-btn { width: auto; white-space: nowrap; }
+    nav { flex-direction: row; overflow-x: auto; padding-bottom: 4px; }
+    .nav-btn { width: auto; white-space: nowrap; flex-shrink: 0; }
     main { margin-left: 0; padding: 16px; }
     .two-col { grid-template-columns: 1fr; }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    h1 { font-size: 1.5rem; margin-bottom: 14px; }
+    .card { padding: 16px; margin-bottom: 14px; }
+    .cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .cards .card { padding: 14px 10px; }
+    .stat p { font-size: 1.1rem; }
+    .form-grid { grid-template-columns: 1fr; }
+    .card > button { width: 100%; }
+    .card-head { flex-direction: column; align-items: stretch; }
+    .card-head select { width: 100%; }
+    table { min-width: 520px; }
+    th, td { padding: 10px 8px; font-size: 0.9rem; }
+    .goal-add { flex-direction: column; }
+    .goal-add button { width: 100%; }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .brand { font-size: 1.15rem; }
+    .nav-btn { padding: 10px 12px; font-size: 0.9rem; }
+    .stat h3 { font-size: 0.85rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
