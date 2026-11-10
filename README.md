@@ -1,112 +1,56 @@
-# My Budget Tracker
+# SpendWise
 
-## Overview
+## Project Description
 
-My Budget Tracker is a simple web application that helps users track their expenses in one place. The application allows users to enter expense details, categorize spending, and view expenses in a structured table. The project focuses on building strong HTML, CSS, and JavaScript fundamentals while creating a clean and user-friendly interface.
+SpendWise is a budget tracker that helps users manage their money in one place. It has a sidebar layout with four pages:
 
-## Features
+* **Dashboard:** shows the budget, total spent, remaining balance, and savings, with a progress bar, a spending breakdown by category, and recent expenses.
+* **Expenses:** lets users add, filter, and delete expenses.
+* **Savings:** lets users create savings goals and track progress toward each one.
+* **Budget:** lets users set their monthly budget.
 
-* Add expense form with:
-
-  * Expense name
-  * Amount
-  * Category selection
-  * Date selection
-* Expense table displaying:
-
-  * Expense name
-  * Amount
-  * Category
-  * Date
-* Budgeting tips video section
-* Instructions section explaining how to use the tracker
-* Responsive design for desktop, tablet, and phone screens
-* Professional styling using CSS
-* Custom typography with Google Fonts
-* Card-based layout using the CSS Box Model
-* JavaScript budget logic:
-
-  * Collects the monthly budget and expense details using input prompts
-  * Calculates the remaining balance
-  * Calculates the percentage of the budget spent
-  * Shows a budget status message
-  * Displays clearly labeled results in the browser console
+Data is saved in the browser using localStorage, so it is still there after a page refresh. The layout is responsive for desktop, tablet, and phone screens.
 
 ## Technologies Used
 
 * HTML5
-* CSS3
-* JavaScript
-* Google Fonts
+* CSS3 (Flexbox, Grid, media queries, Google Fonts)
+* JavaScript (arrays, loops, conditionals, DOM manipulation, event listeners, localStorage)
+* Git and GitHub
+* Netlify
 
-## Project Structure
+## GitHub Repository Information
 
-```text
-budget-tracker/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
+* **Repository:** https://github.com/ajiambo-belinda/week_3_budget_app
+* **Visibility:** Public
+* **Branch:** `main`
 
-## Color Palette
+## Live Website
 
-The application uses a clean and professional color palette:
+**Live URL:** https://wiselyspend.netlify.app
 
-* Dark Green: #166534
-* Darker Green (hover): #14532d
-* Light Blue: #dbeafe
-* White: #ffffff
-* Light Gray: #f5f7fb
+## Deployment Process Summary
 
-## CSS Features Implemented
+1. Created a Git repository in the project folder and committed the project files.
+2. Created a public repository on GitHub and pushed the code to the `main` branch.
+3. In Netlify, used **Add new site > Import an existing project** and connected the GitHub repository.
+4. Left the build command empty, because the project is plain HTML, CSS, and JavaScript, and deployed.
+5. Tested the live site: navigation, adding and deleting expenses, savings goals, saved data, and responsiveness on a phone screen.
+6. Made an update, committed it, and pushed it to GitHub. Netlify rebuilt and published the change automatically, which confirmed that automatic deployment works.
 
-* Custom Google Fonts
-* Styled forms and buttons
-* Styled expense table
-* Alternating table row colors
-* Hover effects
-* Responsive video section using `aspect-ratio`
-* Media queries for tablet and phone screens
-* Scrollable table on small screens
-* Borders, margins, and padding
-* Rounded corners
-* Card-style containers
+## Challenges Encountered During Deployment
 
-## JavaScript Features Implemented
+* **An old `prompt()` popup appeared on the live site.** The deployed site was still using an earlier `script.js` that asked for the monthly budget with `prompt()`. I fixed it by replacing the file with the new version, redeploying, and doing a hard refresh (Ctrl + Shift + R) to clear the cached script.
+* **Drag-and-drop deploys do not update automatically.** To get automatic deployments, I connected the site to the GitHub repository instead.
 
-* Variables for budget and expense data
-* User input using `prompt()`
-* Conversion of input to numbers using `Number()`
-* Reusable functions:
+## Lessons Learned
 
-  * `calculateRemainingBalance()`
-  * `calculatePercentageSpent()`
-  * `getBudgetStatus()`
-* Output displayed in the browser console
-
-## How to Run the Project
-
-1. Download or clone the project files.
-2. Open the project folder.
-3. Open `index.html` in your web browser.
-4. Enter your budget and expense details in the prompts that appear.
-5. Press **F12** and open the **Console** tab to view the budget summary.
-
-No additional installation is required.
-
-## Future Improvements
-
-* Connect the Add Expense form to JavaScript so expenses appear in the table.
-* Calculate total expenses automatically.
-* Add income tracking.
-* Store data using local storage or a database.
-* Generate expense reports and charts.
+* A deployed site only shows what was actually pushed, so check that the right files are in the repository before deploying.
+* Browsers cache files, so a hard refresh is needed to see updates.
+* Connecting Netlify to GitHub means every `git push` updates the live site, which makes updating much faster.
+* Testing the live site on a phone and on different screen sizes finds problems that testing locally can miss.
+* Small, clear commit messages make it easier to see what changed in each deployment.
 
 ## Author
 
 Belinda Ajiambo
-
-## License
-
-This project was created for learning purposes as part of a web development assignment.
